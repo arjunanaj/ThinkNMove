@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
-import{ faPhoneAlt ,faCheck,faPhoneSquare,faMapLocationDot,faLocation} from '@fortawesome/free-solid-svg-icons';
-import{ faWhatsapp ,faFacebookF,faGooglePlusG,faTwitter,faInstagram,faLinkedin,faGithub, faSquareGooglePlus, faGooglePlusSquare, faFacebookMessenger, faFacebook, faGithubAlt, faXTwitter, faLinkedinIn, faFacebookSquare, faSquareXTwitter, faGooglePlus} from '@fortawesome/free-brands-svg-icons';
+import { Component, OnInit } from '@angular/core';
+import{ faPhoneAlt ,faCheck,faPhoneSquare,faMapLocationDot,faLocation,faStar} from '@fortawesome/free-solid-svg-icons';
+import{ faWhatsapp ,faInstagram, faFacebookF} from '@fortawesome/free-brands-svg-icons';
 import{ faEnvelope,faUser} from '@fortawesome/free-solid-svg-icons';
 import { Consulation } from './consulation';
-import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { ConsulationService } from './consulation.service';
-
+import * as AOS from 'aos';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -13,7 +12,18 @@ import Swal from 'sweetalert2';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+   ngOnInit() {
+AOS.init({
+  duration:1200,
+  easing:'linear',
+  once:true,
+  disable: 'mobile'
+ 
+  
+})
+}
   title = 'Think N Move';
  call=faPhoneAlt 
  whatsup=faWhatsapp
@@ -23,32 +33,26 @@ export class AppComponent {
  user=faUser
  phone=faPhoneSquare
  location=faMapLocationDot
- fb=faFacebook
- twitter=faXTwitter
- insta=faInstagram
- linkedIn=faLinkedinIn
- git=faGithub
+ fb=faFacebookF
+insta=faInstagram
+star=faStar
  loginning=false;
- success=faCheckCircle
- error=faExclamationCircle
  phoneNumber="7603882854"
  loading=false;
  consulation:Consulation=new Consulation();
-
- whatsapp: string = '7603882854'; // Replace with your phone number
- message: string = 'Hello Sir!'; // Replace with your pre-filled message
- whatsappLink: string;
+ message: string ='Hello Sir!'; 
+ fblink:string="https://www.facebook.com/thinknmove7?mibextid=ZbWKwL";
+ instalink:string="https://www.instagram.com/thinknmove7?utm_source=qr&igsh=MWIzNHptbGlxYXJy";
+ whatsappLink:string = `https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(this.message)}`;
 
  constructor(private consulationServ:ConsulationService){
-  this.whatsappLink = `https://wa.me/${this.whatsapp}?text=${encodeURIComponent(this.message)}`;
+  
  }
 
  makeCall() {
   if (this.phoneNumber) {
-    window.location.href = `tel:${this.phoneNumber}`;
-  } else {
-    alert('Please enter a valid phone number');
-  }
+    window.location.href =`tel:${this.phoneNumber}`;
+  } 
 }
 
 BookNow(){
@@ -61,7 +65,7 @@ BookNow(){
         icon:'success',
         iconColor:'green',
         title: 'Thank you ',
-        text: ' we will reach you back soon...',
+        text: ' We will reach you back soon...',
         width: '380px'  ,
          customClass: 'swal-height'
       });
@@ -73,9 +77,9 @@ BookNow(){
      if(error){
       Swal.fire({
         icon:'error',
-          iconColor:'red',
+        iconColor:'red',
         title: 'Something went wrong',
-        text: 'Internal server issue  try again later',
+        text: ' Some internal issue try again later',
         width: '380px'  ,
          customClass: 'swal-height'
       });

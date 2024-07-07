@@ -3,7 +3,7 @@
 }
 
 .navbutton{
-    outline: solid rgb(231, 255, 195) 1px;
+    outline: solid rgb(255, 255, 255) 3px;
     color: white;
 
 }
@@ -11,15 +11,16 @@
 .container-fluid_1{
  
     width: 100%;
-    background:linear-gradient(to right ,rgba(1, 15, 84, 0.379),rgba(0, 11, 75, 0.374)),url("../assets/img/pexels-santesson89-12412343.jpg");
+    background:linear-gradient(to right ,rgba(0, 0, 0, 0.505),rgba(0, 0, 0, 0.395)),url("../assets/img/1287373.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
    
 
 }
+
 .fromcard_1{
-    background:linear-gradient(to right ,rgba(196, 250, 255, 0.582),rgba(201, 253, 255, 0.578));
+    background:linear-gradient(to right ,rgba(164, 164, 164, 0.603),rgba(184, 184, 184, 0.612));
 }
 .countryInput{
     width: 75px;
@@ -77,14 +78,13 @@
 }
 .fromcard_2{
  
-    background: linear-gradient(109.6deg, rgba(185, 185, 185, 0.578) 30.1%, rgba(178, 180, 193, 0.546) 100.2%);
+    background: linear-gradient(109.6deg, rgba(32, 12, 255, 0.091) 30.1%, rgba(0, 34, 255, 0.114) 100.2%);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: .5s ease-in-out;
+    
 }
 
-.fromcard_2:hover {
-    transform:scale(1.1);
-  }
+
 
 .container-fluid_4{
  
@@ -97,4 +97,8 @@
     border-radius: 50%;
     background-color: white;
 }
-  
+.webicon{
+    width: 45px;
+    height: 45px; 
+    border-radius: 50%; 
+}
