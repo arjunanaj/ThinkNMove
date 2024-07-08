@@ -19,6 +19,7 @@
 
 }
 
+
 .fromcard_1{
     background:linear-gradient(to right ,rgba(164, 164, 164, 0.603),rgba(184, 184, 184, 0.612));
 }
@@ -99,6 +100,17 @@
 }
 .webicon{
     width: 45px;
-    height: 45px; 
+    font-size: 20px;
     border-radius: 50%; 
+}
+.fb{
+    background-color: #0082ca 
+}
+.insta{
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.whatsup{
+    
+    background-color: #ffffff
 }

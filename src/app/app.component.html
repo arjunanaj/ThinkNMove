@@ -16,14 +16,14 @@
       <!-- Icon -->
       <div class="d-flex mr-auto">
         <div>
-          <a class=" align-items-center mx-4">
-            <fa-icon class=" text-info d-sm-none  h1 btn bg-light  rounded-pill" (click)="makeCall()"
+          <a class=" align-items-center mx-4" (click)="makeCall()">
+            <fa-icon class=" text-info d-sm-none  h1 btn bg-light  rounded-pill"
               [icon]="call"></fa-icon>
-            <a class="d-none  d-md-inline-block btn shadow-sm navbutton" (click)="makeCall()"><fa-icon
+            <a class="d-none  d-md-inline-block btn shadow-sm navbutton" ><fa-icon
                 class=" px-1 text-info  h5 me-1" [icon]="call"></fa-icon>Call us +91 9566150753</a>
           </a>
-          <a [href]="whatsappLink" class=" align-items-center  ">
-            <fa-icon class=" text-success d-sm-none h1 btn bg-light  rounded-pill" [icon]="whatsup"></fa-icon>
+          <a class=" align-items-center  "[href]="whatsappLink">
+            <fa-icon  class=" text-success d-sm-none h1 btn bg-light  rounded-pill" [icon]="whatsup"></fa-icon>
             <a [href]="whatsappLink" class="d-none  d-md-inline-block btn bg-light  rounded-pill"><fa-icon
                 class="  text-success h4 " [icon]="whatsup"></fa-icon></a>
           </a>
@@ -42,8 +42,8 @@
 
   <div class="container ">
     <div class="row justify-content-center min-vh-100  align-items-center ">
-      <div class="col-lg-7 col-12 mt-5 intro" data-aos="fade-left">
-        <div class="mt-md-3  mx-md-5 mx-sm-0 mt-5" >
+      <div class="col-lg-7 col-12 mt-5 " data-aos="fade-left">
+        <div class="mt-md-3  mx-md-5 mx-sm-0 " >
           <h1 class=" display-3 text-light "
             style="color: rgb(164, 246, 255); font-family: 'Times New Roman', Times, serif;  ">Be the Next to Study
             <h2 class="display-3" style="color: rgb(68, 180, 255); font-weight:bold; font-style:italic;">
@@ -120,11 +120,11 @@
 
       <div class="col-lg-5  col-12 mt-lg-5 mt-3">
 
-        <div class="card fromcard_1 border-0 rounded-4 mt-5 mx-md-5  mx-0 mb-3" >
+        <div class="card fromcard_1 border-0 rounded-4 mt-5 mx-md-5  mx-0 mb-3" data-aos="zoom-down" >
           <div class="card-body p-3  p-md-4 p-xl-4">
             <div class="row">
               <div class="col-12">
-                <div class="mb-4 text-center">
+                <div class="mb-4 text-center" >
                   <span class="h2 text-italic  text-uppercase text-bold"
                     style="font-style:italic; color: rgb(2, 21, 100);font-family:Arial, Helvetica, sans-serif ;font-weight: bolder;">Book
                     your <br> free consulation</span>
@@ -432,8 +432,8 @@
                 </p>
               </div>
               <div class="col-lg-9 col-12 ">
-                <p class="card-title h3 ">Aravindhan</p>
-                <p class="card-title h6  text-muted ">Kumbakonam -> Singapore</p>
+                <p class="card-title h3 " style="color: rgb(2, 2, 80);">Aravindhan</p>
+                <p class="card-title h6  text-muted ">Chidambaram -> Singapore</p>
               </div>
               <hr>
             </div>
@@ -472,7 +472,7 @@
               </div>
               <div class="col-lg-9 col-12 ">
                 <p class="card-title h3 ">Viswanathan</p>
-                <p class="card-title h6  text-muted ">Chennai -> Dubai</p>
+                <p class="card-title h6  text-muted ">Kumbakonam -> Singapore</p>
               </div>
               <hr>
             </div>
@@ -518,7 +518,7 @@
               </div>
               <div class="col-md-9 col-12 ">
                 <p class="card-title h3 ">Gayathri</p>
-                <p class="card-title h6  text-muted ">Thanjavur -> Canada</p>
+                <p class="card-title h6  text-muted ">Thanjavur -> Singapore</p>
               </div>
               <hr>
             </div>
@@ -735,16 +735,15 @@
         <div class="col-md-6 col-lg-3  mx-auto mt-md-5  mt-sm-3 mt-lg-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
 
-          <a class="btn  m-1 webicon " [href]="fblink" style="background-color: #0082ca" href="" role="button"><fa-icon
-              class=" text-white  h4 " [icon]="fb"></fa-icon></a>
+          <a class="btn  mx-1 webicon align-items-center fb" [href]="fblink"  role="button"><fa-icon
+              class=" text-white   " [icon]="fb"></fa-icon></a>
 
-          <a class="btn  m-1 webicon" [href]="instalink"
-            style="  background: #d6249f;
-          background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);" href="" role="button"><fa-icon
-              class=" text-white  h4 " [icon]="insta"></fa-icon></a>
+          <a class="btn  mx-1 align-items-center webicon insta" [href]="instalink"
+             role="button"><fa-icon
+              class=" text-white   " [icon]="insta"></fa-icon></a>
 
-          <a class="btn  m-1 webicon" [href]="whatsappLink" style="background-color: #ffffff" href="#!"
-            role="button"><fa-icon class=" text-success  h4 " [icon]="whatsup"></fa-icon></a>
+          <a class="btn  mx-1 align-items-center webicon whatsup" [href]="whatsappLink"  href="#!"
+            role="button"><fa-icon class=" text-success"   [icon]="whatsup"></fa-icon></a>
 
         </div>
       </div>

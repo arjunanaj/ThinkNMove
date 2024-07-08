@@ -9,11 +9,11 @@ import { Consulation } from './consulation';
 })
 export class ConsulationService {
 
-  private basicUrl="http://localhost:9091/login"
+  private basicUrl="http://localhost:9091/ThinkNMove"
   constructor(private http:HttpClient) { }
 
   public sendConsulation(consulation:Consulation):Observable<any>{
-    return this.http.post<any>(`${this.basicUrl}/webSiteMail`,consulation,{observe:'response',responseType:'text' as 'json'}).pipe(
+    return this.http.post<any>(`${this.basicUrl}/mail`,consulation,{observe:'response',responseType:'text' as 'json'}).pipe(
      
     )
   }
