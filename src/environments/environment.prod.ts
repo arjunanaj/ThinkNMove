@@ -1,4 +1,4 @@
 export const environment = {
     production:true,
-    backendUrl: 'https://thinknmove-1-0.onrender.com'
+    backendUrl: 'https://thinknmove-2-0.onrender.com'
 };
